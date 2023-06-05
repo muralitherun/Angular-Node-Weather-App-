@@ -1,0 +1,39 @@
+<header class="header">
+  <img src="https://cdn-icons-png.flaticon.com/128/3314/3314019.png" alt="Weather Icon" class="header-icon">
+  <h1 class="header-title">WEATHER REPORTER</h1>
+</header>
+
+<div class="container">
+  <div class="search-box">
+    <input type="text" placeholder="Enter a city or ZIP code" [(ngModel)]="inputValue" name="location">
+    <button class="get-report-button" (click)="getWeatherReport()">Get Weather Report</button>
+  </div>
+
+  <div *ngIf="weatherReport" class="card weather-report">
+    <h3 class="report-title">{{ weatherReport.city.toUpperCase() }}</h3>
+    <p>Temperature: {{ weatherReport.temperature }} {{ temperatureUnit }}</p>
+    <button class="toggle-button" (click)="toggleTemperatureUnit()">{{ toggleButtonText }}</button>
+    <p>The weather is {{ weatherReport.description }}.</p>
+    <img [src]="weatherReport.imageURL" alt="Weather Icon" class="weather-icon">
+  </div>
+
+  <div *ngIf="weatherReport && weatherReport.forecast" class="forecast-card">
+    <h3 class="card-title">9 HOUR FORECAST</h3>
+    <table class="forecast-table">
+      <thead>
+        <tr>
+          <th>TIME</th>
+          <th>TEMPERATURE (°C)</th>
+          <th>PRECIPITATION (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let forecastItem of weatherReport.forecast">
+          <td>{{ forecastItem.time }}</td>
+          <td>{{ forecastItem.temperature }} {{ temperatureUnit }}</td>
+          <td>{{ forecastItem.precipitation }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

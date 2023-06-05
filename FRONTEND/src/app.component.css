@@ -1,0 +1,131 @@
+body, .card, .forecast-card {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-title,
+.report-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.header {
+    background-color: #A4BC92;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-content: center;
+    padding-left: 572px;
+  }
+  
+  .header-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .header-title {
+    font-size: 24px;
+  }
+
+  body {
+    background-color: #FBFFDC;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .get-report-button, .toggle-button {
+    background-color: #41644A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .weather-report {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #CEEDC7;
+    color: black;
+    border-radius: 5px;
+  }
+  
+  .report-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .weather-icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+  }
+  
+  .toggle-button:focus {
+    outline: none;
+  }
+  
+  .forecast-card {
+    margin-top: 32px;
+    background-color: #CEEDC7;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333333;
+    text-align: center;
+  }
+  
+  .forecast-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #DAE2B6;
+  }
+  
+  .forecast-table th,
+  .forecast-table td {
+    padding: 8px;
+    text-align: center;
+  }
+
+  .forecast-table th {
+    background-color: #CCD6A6;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .forecast-table tr:nth-child(even) {
+    background-color: #CCD6A6;
+  }
+  
+  .forecast-table tr:hover {
+    background-color: white;
+  }
